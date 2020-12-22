@@ -3,9 +3,10 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <script src="https://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
+  <title>XiaoHuang</title>
+  <script src=" https://libs.baidu.com/jquery/1.11.3/jquery.min.js">
+  </script>
   <style>
     html,
     body {
@@ -19,10 +20,15 @@
       overflow: hidden;
     }
 
+    #js_open {
+      margin-top: 20%;
+      overflow: hidden;
+    }
+
     .open_msg {
       color: #fff;
       text-align: center;
-      margin-top: 5%;
+      margin-top: 20px;
       animation: FadeIn 1s linear;
       animation-fill-mode: both;
     }
@@ -47,7 +53,7 @@
 
     .chest {
       display: none;
-      width: 500px;
+      width: 350px;
       height: 500px;
       margin: 0 auto;
       position: relative;
@@ -70,25 +76,25 @@
 
     .sided {
       top: 100px;
-      width: 130px;
-      height: 130px;
+      width: 160px;
+      height: 160px;
       border-radius: 100%;
     }
 
     .center {
-      width: 113px;
-      height: 113px;
-      bottom: 225px;
-      left: 195px;
+      width: 140px;
+      height: 140px;
+      bottom: 185px;
+      left: 106px;
       transform: rotateZ(225deg);
     }
 
     .left {
-      left: 144px;
+      left: 44px;
     }
 
     .right {
-      right: 144px;
+      right: 44px;
     }
 
     @keyframes FadeIn {
@@ -139,10 +145,12 @@
   </div>
 </body>
 <script>
-  setTimeout(() => {
-    document.getElementById('js_open').style.display = 'none';
-    document.getElementById('js_chest').style.display = 'block';
-  }, 6000)
+  $(function () {
+    setTimeout(() => {
+      $('#js_open').hide()
+      $('#js_chest').show()
+    }, 6000)
+  })
 </script>
 
 </html>
