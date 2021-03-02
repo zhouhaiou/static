@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"">
+  <title>XiaoHuang</title>
+  <script src=" https://libs.baidu.com/jquery/1.11.3/jquery.min.js">
+  </script>
+  <style>
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffa5a5;
+      overflow: hidden;
+    }
+
+    #js_open {
+      margin-top: 20%;
+      overflow: hidden;
+    }
+
+    .open_msg {
+      color: #fff;
+      text-align: center;
+      margin-top: 20px;
+      animation: FadeIn 1s linear;
+      animation-fill-mode: both;
+    }
+
+    .a {
+      animation-delay: 0s;
+      -webkit-animation-delay: 0s;
+      /* Safari 和 Chrome */
+    }
+
+    .b {
+      animation-delay: 2s;
+      -webkit-animation-delay: 2s;
+      /* Safari 和 Chrome */
+    }
+
+    .c {
+      animation-delay: 4s;
+      -webkit-animation-delay: 4s;
+      /* Safari 和 Chrome */
+    }
+
+    .d {
+      animation-delay: 6s;
+      -webkit-animation-delay: 6s;
+      /* Safari 和 Chrome */
+    }
+
+    .e {
+      animation-delay: 8s;
+      -webkit-animation-delay: 8s;
+      /* Safari 和 Chrome */
+    }
+
+    .chest {
+      display: none;
+      width: 350px;
+      height: 500px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .heart {
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(-90deg, #F50A45 0%, #d5093c 40%);
+      animation: beat 0.7s ease 0s infinite normal;
+    }
+
+    .heart.center {
+      background: linear-gradient(-45deg, #B80734 0%, #d5093c 40%);
+    }
+
+    .heart.top {
+      z-index: 3;
+    }
+
+    .sided {
+      top: 100px;
+      width: 160px;
+      height: 160px;
+      border-radius: 100%;
+    }
+
+    .center {
+      width: 140px;
+      height: 140px;
+      bottom: 186px;
+      left: 105px;
+      transform: rotateZ(225deg);
+    }
+
+    .left {
+      left: 44px;
+    }
+
+    .right {
+      right: 44px;
+    }
+
+    @keyframes FadeIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(.1);
+      }
+
+      85% {
+        opacity: 1;
+        -webkit-transform: scale(1.05);
+      }
+
+      100% {
+        -webkit-transform: scale(1);
+      }
+    }
+
+    @keyframes beat {
+      0% {
+        transform: scale(1) rotate(225deg);
+        box-shadow: 0 0 40px #d5093c;
+      }
+
+      50% {
+        transform: scale(1.1) rotate(225deg);
+        box-shadow: 0 0 70px #d5093c;
+      }
+
+      100% {
+        transform: scale(1) rotate(225deg);
+        box-shadow: 0 0 40px #d5093c;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="js_open">
+    <div class="open_msg 1">小黄同学</div>
+    <div class="open_msg 2">美丽又可爱的人儿</div>
+    <div class="open_msg 3">给你我的一颗小心心呀</div>
+    <div class="open_msg 4">愿意和我在一起吗</div>
+    <div class="open_msg 5">By Mr.Zhou</div>
+  </div>
+  <div id="js_chest" class="chest">
+    <div class="heart left sided top"></div>
+    <div class="heart center"></div>
+    <div class="heart right sided"></div>
+  </div>
+</body>
+<script>
+  $(function () {
+    setTimeout(() => {
+      $('#js_open').hide()
+      $('#js_chest').show()
+    }, 9000)
+  })
+</script>
+
+</html>
